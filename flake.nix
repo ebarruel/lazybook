@@ -33,7 +33,7 @@ outputs = inputs@{ self, nixpkgs, flake-utils }:
 
                     src = ./client;
 
-                    npmDepsHash = "sha256-A85l8kFgIU2grgDQNBM7ilLVPehMl6ilkpt4YoiZyeo=";
+                    npmDepsHash = pkgs.lib.fakeSha256;
 
                     npmBuild = "npm run build";
 
