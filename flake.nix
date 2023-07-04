@@ -4,10 +4,10 @@ description = "Flake for Go backend with Caddy and JS frontend with Ionic and Sv
 inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
     flake-utils.url = "github:numtide/flake-utils";
-    inputs.gomod2nix.url = "github:nix-community/gomod2nix";
+    gomod2nix.url = "github:nix-community/gomod2nix";
 };
 
-outputs = inputs@{ self, nixpkgs, flake-utils }:
+outputs = inputs@{ self, nixpkgs, flake-utils, gomod2nix }:
     flake-utils.lib.eachSystem [
             "x86_64-darwin"   # MacOS (Intel)
             "aarch64-linux"   # Raspberry Pi OS
@@ -23,7 +23,7 @@ outputs = inputs@{ self, nixpkgs, flake-utils }:
 
             serverInputs = with pkgs; [
                 go gopls gotools go-tools
-                gomod2nix
+                gomod2nix.packages.${system}.default
             ];
         in {
             packages = {
@@ -40,7 +40,7 @@ outputs = inputs@{ self, nixpkgs, flake-utils }:
 
                     installPhase = ''
                         mkdir $out
-                        cp dist/index.html $out
+                        cp client/dist/index.html $out
                     '';
                 };
                 server = pkgs.buildGoModule {
@@ -55,8 +55,8 @@ outputs = inputs@{ self, nixpkgs, flake-utils }:
                 };
             };
 
-            devShells = {
-                default = pkgs.mkShell {
+            devShells = with pkgs; {
+                default = mkShell {
                     buildInputs = clientInputs;
                     shellHook = ''
                         cd client
@@ -64,7 +64,7 @@ outputs = inputs@{ self, nixpkgs, flake-utils }:
                         export TERM="xterm-256color"
                     '';
                 };
-                server = pkgs.mkShell {
+                server = mkShell {
                     buildInputs = serverInputs;
                     shellHook = ''
                         cd server
