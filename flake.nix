@@ -22,7 +22,7 @@ outputs = inputs@{ self, nixpkgs, flake-utils }:
 
             serverInputs = with pkgs; [
                 go gopls gotools go-tools
-                caddy
+                gomod2nix
             ];
         in {
             packages = {
