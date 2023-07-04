@@ -4,6 +4,7 @@ description = "Flake for Go backend with Caddy and JS frontend with Ionic and Sv
 inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
     flake-utils.url = "github:numtide/flake-utils";
+    inputs.gomod2nix.url = "github:nix-community/gomod2nix";
 };
 
 outputs = inputs@{ self, nixpkgs, flake-utils }:
