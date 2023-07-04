@@ -1,4 +1,7 @@
 # Nix artifacts
 result
 
+# JS artifacts
+node_modules
+
 .direnv
