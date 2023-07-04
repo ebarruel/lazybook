@@ -33,7 +33,7 @@ outputs = inputs@{ self, nixpkgs, flake-utils }:
 
                     src = ./client;
 
-                    npmDepsHash = pkgs.lib.fakeSha256;
+                    npmDepsHash = "sha256-QFX2AkKL7ZeK48Mmc3h2Qh1tZbJ33BBnjz1yKtS45YE=";
 
                     npmBuild = "npm run build";
 
@@ -48,8 +48,9 @@ outputs = inputs@{ self, nixpkgs, flake-utils }:
                     buildInputs = serverInputs;
 
                     src = ./server;
+                    modules = .server/gomod2nix.toml;
 
-                    vendorSha256 = pkgs.lib.fakeSha256;
+                    vendorSha256 = null;
                 };
             };
 
@@ -57,6 +58,7 @@ outputs = inputs@{ self, nixpkgs, flake-utils }:
                 default = pkgs.mkShell {
                     buildInputs = clientInputs;
                     shellHook = ''
+                        cd client
                         echo "This is the client"
                         export TERM="xterm-256color"
                     '';
@@ -64,6 +66,7 @@ outputs = inputs@{ self, nixpkgs, flake-utils }:
                 server = pkgs.mkShell {
                     buildInputs = serverInputs;
                     shellHook = ''
+                        cd server
                         echo "This is the server"
                         export TERM="xterm-256color"
                     '';
