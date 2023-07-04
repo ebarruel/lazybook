@@ -4,7 +4,7 @@
 	</div>
 	<div class="md:grid md:grid-cols-2 md:grid-rows-2">
 		<div class="flex items-start font-montserrat my-6 mr-10">
-			<img src="dist/assets/logos/Heart.svg" alt="" class="h-7 mr-4" />
+			<img src="$static/favicon.png" alt="" class="h-7 mr-4" />
 			<div>
 				<h3 class="font-semibold text-2xl">Feature #1</h3>
 				<p>
@@ -16,7 +16,7 @@
 		</div>
 
 		<div class="flex items-start font-montserrat my-6 mr-10">
-			<img src="dist/assets/logos/Heart.svg" alt="" class="h-7 mr-4" />
+			<img src="$static/favicon.png" alt="" class="h-7 mr-4" />
 			<div>
 				<h3 class="font-semibold text-2xl">Feature #2</h3>
 				<p>
@@ -28,7 +28,7 @@
 		</div>
 
 		<div class="flex items-start font-montserrat my-6 mr-10">
-			<img src="dist/assets/logos/Heart.svg" alt="" class="h-7 mr-4" />
+			<img src="$static/favicon.png" alt="" class="h-7 mr-4" />
 			<div>
 				<h3 class="font-semibold text-2xl">Feature #3</h3>
 				<p>
@@ -40,7 +40,7 @@
 		</div>
 
 		<div class="flex items-start font-montserrat my-6 mr-10">
-			<img src="dist/assets/logos/Heart.svg" alt="" class="h-7 mr-4" />
+			<img src="$static/favicon.png" alt="" class="h-7 mr-4" />
 			<div>
 				<h3 class="font-semibold text-2xl">Feature #4</h3>
 				<p>

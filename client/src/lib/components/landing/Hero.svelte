@@ -29,11 +29,11 @@
 	</div>
 	<div class="flex justify-around md:block mt-8 md:mt-0 md:flex-1">
 		<div class="relative">
-			<img src="dist/assets/Highlight1.svg" alt="" class="absolute -top-16 -left-10" />
+			<img src="$static/favicon.png" alt="" class="absolute -top-16 -left-10" />
 		</div>
-		<img src="dist/assets/MacBook Pro.png" alt="Macbook" />
+		<img src="$static/favicon.png" alt="Macbook" />
 		<div class="relative">
-			<img src="dist/assets/Highlight2.svg" alt="" class="absolute -bottom-10 -right-6" />
+			<img src="$static/favicon.png" alt="" class="absolute -bottom-10 -right-6" />
 		</div>
 	</div>
 </section>

@@ -8,7 +8,7 @@
 			<div question class="font-montserrat font-medium mr-auto">
 				Where can I get this HTML template?
 			</div>
-			<img src="dist/assets/logos/CaretRight.svg" alt="" class="transform transition-transform" />
+			<img src="$static/favicon.png" alt="" class="transform transition-transform" />
 		</div>
 		<div answer class="font-montserrat text-sm font-extralight pb-8 hidden">
 			You can download it on Gumroad.com
@@ -19,7 +19,7 @@
 	<div toggleElement class="w-full py-4">
 		<div class="flex justify-between items-center">
 			<div question class="font-montserrat font-medium mr-auto">Is this HTML template free?</div>
-			<img src="dist/assets/logos/CaretRight.svg" alt="" class="transform transition-transform" />
+			<img src="$static/favicon.png" alt="" class="transform transition-transform" />
 		</div>
 		<div answer class="font-montserrat text-sm font-extralight pb-8 hidden">
 			Yes! For you it is free.
@@ -30,7 +30,7 @@
 	<div toggleElement class="w-full py-4">
 		<div class="flex justify-between items-center">
 			<div question class="font-montserrat font-medium mr-auto">Am I awesome?</div>
-			<img src="dist/assets/logos/CaretRight.svg" alt="" class="transform transition-transform" />
+			<img src="$static/favicon.png" alt="" class="transform transition-transform" />
 		</div>
 		<div answer class="font-montserrat text-sm font-extralight pb-8 hidden">
 			Yes! No doubt about it.

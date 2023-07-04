@@ -4,7 +4,6 @@
 	import Footer from '$lib/components/landing/Footer.svelte';
 	import Hero from '$lib/components/landing/Hero.svelte';
 	import HowItWorks from '$lib/components/landing/HowItWorks.svelte';
-	import Pricing from '$lib/components/landing/Pricing.svelte';
 </script>
 
 <!-- Hero -->
@@ -15,9 +14,6 @@
 
 <!-- Features -->
 <Features />
-
-<!-- Pricing -->
-<Pricing />
 
 <!-- FAQ  -->
 <FAQ />
