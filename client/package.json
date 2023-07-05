@@ -42,7 +42,7 @@
 	"dependencies": {
 		"@capacitor/android": "^5.1.0",
 		"@capacitor/core": "^5.1.0",
-		"@ionic/core": "^7.0.3",
+		"@ionic/core": "^7.1.1",
 		"ionic-svelte": "^0.5.81",
 		"ionicons": "^7.1.2"
 	}
