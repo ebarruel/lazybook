@@ -1,4 +1,4 @@
-package client.ionic.io;
+package lazybook.ionic.io;
 
 import com.getcapacitor.BridgeActivity;
 
