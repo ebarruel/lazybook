@@ -41,8 +41,13 @@
 		Want to know what is happening more - follow me on Twitter - https://twitter.com/Tommertomm
 		Discord channel on Ionic server - https://discordapp.com/channels/520266681499779082/1049388501629681675
 	*/
+
+	import Nav from '$lib/components/Nav.svelte';
 </script>
 
 <ion-app>
 	<slot />
+	<nav>
+		<Nav />
+	</nav>
 </ion-app>

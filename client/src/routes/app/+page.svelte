@@ -1,5 +1,4 @@
-
-  <ion-card>
+<ion-card>
 	<ion-card-header>
 		<ion-card-subtitle>Great success!!</ion-card-subtitle>
 		<ion-card-title>Welcome to your app!</ion-card-title>
@@ -42,5 +41,3 @@
 		>
 	</ion-item>
 </ion-card>
-
-  

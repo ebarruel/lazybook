@@ -1,6 +1,3 @@
-<script>
-</script>
-
 <ion-tabs>
     <ion-tab-bar slot="bottom">
         <ion-tab>
