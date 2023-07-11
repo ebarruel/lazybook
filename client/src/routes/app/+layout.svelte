@@ -8,7 +8,7 @@
 	import 'ionic-svelte/components/all';
 
 	/* Theme variables */
-	import '../theme/variables.css';
+	import '../../theme/variables.css';
 
 	/*
 		This part - import 'ionic-svelte/components/all'; -  loads all components at once.

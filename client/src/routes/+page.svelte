@@ -1,7 +1,6 @@
 <script lang="ts">
     import { goto } from '$app/navigation';
     import Landing from '$lib/components/landing/Landing.svelte';
-    import Nav from '$lib/components/Nav.svelte';
     import { onMount } from 'svelte';
     import { Capacitor } from '@capacitor/core';
     const isPWA = (win: Window): boolean =>
@@ -18,9 +17,6 @@
         if (isPWA(window)) {
             console.log('In PWA - on wrong route - redirecting');
             goto('/app/splash');
-        } else showLanding = !isPWA(window);
+        } else goto('/app');
     });
 </script>
-{#if showLanding}
-    <Landing />
-{/if}
