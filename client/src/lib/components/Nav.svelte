@@ -1,23 +1,28 @@
 <ion-tabs>
     <ion-tab-bar slot="bottom">
         <ion-tab-button tab="home">
-            <ion-icon :icon="home-outline">home</ion-icon>
+            <ion-icon name="home-outline">home</ion-icon>
+            <ion-label>home</ion-label>
         </ion-tab-button>
 
         <ion-tab-button tab="library">
-            <ion-icon :icon="library-outline">lib</ion-icon>
+            <ion-icon name="library-outline"></ion-icon>
+            <ion-label>lib</ion-label>
         </ion-tab-button>
             
         <ion-tab-button tab="publish">
-            <ion-icon :icon="pencil-outline">pub</ion-icon>
+            <ion-icon name="pencil-outline"></ion-icon>
+            <ion-label>pub</ion-label>
         </ion-tab-button>
 
         <ion-tab-button tab="search">
-            <ion-icon :icon="search-outline">search</ion-icon>
+            <ion-icon name="search-outline"></ion-icon>
+            <ion-label>search</ion-label>
         </ion-tab-button>
 
         <ion-tab-button tab="user">
-            <ion-icon :icon="person-outline">user</ion-icon>
+            <ion-icon name="person-outline"></ion-icon>
+            <ion-label>user</ion-label>
         </ion-tab-button>
     </ion-tab-bar>
 </ion-tabs>
