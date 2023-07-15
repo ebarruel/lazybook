@@ -1,7 +1,7 @@
 <ion-tabs>
     <ion-tab-bar slot="bottom">
         <ion-tab-button tab="home">
-            <ion-icon name="home-outline">home</ion-icon>
+            <iconify-icon icon="ion:home-outline"></iconify-icon>
             <ion-label>home</ion-label>
         </ion-tab-button>
 

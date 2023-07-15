@@ -10,6 +10,9 @@
 	/* Theme variables */
 	import '../../theme/variables.css';
 
+	/* Icons */
+	import 'unplugin-icons/types/svelte';
+
 	/*
 		This part - import 'ionic-svelte/components/all'; -  loads all components at once.
 
