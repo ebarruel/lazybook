@@ -11,7 +11,8 @@
 	import '../../theme/variables.css';
 
 	/* Icons */
-	import 'unplugin-icons/types/svelte';
+	// import 'unplugin-icons/types/svelte';
+	// import 'iconify-icon';
 
 	/*
 		This part - import 'ionic-svelte/components/all'; -  loads all components at once.
@@ -51,6 +52,10 @@
 <ion-app>
 	<slot />
 	<nav>
-		<Nav />
+		<ion-tabs>
+			<ion-tab-bar slot="bottom">
+				<Nav />
+			</ion-tab-bar>
+		</ion-tabs>
 	</nav>
 </ion-app>
