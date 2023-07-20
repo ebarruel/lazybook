@@ -15,7 +15,7 @@
 
     <ion-grid>
         <ion-row>
-            <ion-col>
+            <ion-col size="auto">
                 <ion-img src={coverImg} alt={title}></ion-img>
             </ion-col>
             <ion-col>
