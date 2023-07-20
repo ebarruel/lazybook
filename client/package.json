@@ -1,7 +1,7 @@
 {
 	"name": "lazybook",
 	"version": "0.0.1",
-	"private": true,
+	"private": false,
 	"author": "Evangeline Barruel <empbarruel@gmail.com>",
 	"homepage": "https://github.com/ebarruel/lazybook",
 	"license": "AGPL-3.0-or-later",
