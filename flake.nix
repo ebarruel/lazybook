@@ -34,7 +34,7 @@ outputs = inputs@{ self, nixpkgs, flake-utils, gomod2nix }:
 
                     src = ./client;
 
-                    npmDepsHash = "sha256-QFX2AkKL7ZeK48Mmc3h2Qh1tZbJ33BBnjz1yKtS45YE=";
+                    npmDepsHash = "sha256-DRgeeBN4Bkc3oOjo9OomARsF6ngm0AOXRBgtazlq50Y=";
 
                     npmBuild = "npm run build";
 
@@ -57,10 +57,18 @@ outputs = inputs@{ self, nixpkgs, flake-utils, gomod2nix }:
 
             devShells = with pkgs; {
                 default = mkShell {
+                    buildInputs = clientInputs ++ [ prefetch-npm-deps ];
+                    shellHook = ''
+                        cd client
+                        echo "This is the client (dev)"
+                        export TERM="xterm-256color"
+                    '';
+                };
+                client = mkShell {
                     buildInputs = clientInputs;
                     shellHook = ''
                         cd client
-                        echo "This is the client"
+                        echo "This is the client (prod)"
                         export TERM="xterm-256color"
                     '';
                 };
