@@ -16,7 +16,7 @@
     <ion-grid>
         <ion-row>
             <ion-col>
-                <ion-img src={coverImg}></ion-img>
+                <ion-img src={coverImg} alt={title}></ion-img>
             </ion-col>
             <ion-col>
                 <h1>{title}</h1>
