@@ -1,14 +1,14 @@
-<script lang='ts'>
-	import { setupIonicBase } from 'ionic-svelte';
+<script lang="ts">
+	import { setupIonicBase } from "ionic-svelte";
 
 	/* Call Ionic's setup routine */
 	setupIonicBase();
 
 	/* Import all components - or do partial loading - see below */
-	import 'ionic-svelte/components/all';
+	import "ionic-svelte/components/all";
 
 	/* Theme variables */
-	import '../../theme/variables.css';
+	import "../../theme/variables.css";
 
 	/*
 		This part - import 'ionic-svelte/components/all'; -  loads all components at once.
@@ -42,7 +42,7 @@
 		Discord channel on Ionic server - https://discordapp.com/channels/520266681499779082/1049388501629681675
 	*/
 
-	import Nav from '$lib/components/Nav.svelte';
+	import Nav from "$lib/components/Nav.svelte";
 </script>
 
 <ion-app>

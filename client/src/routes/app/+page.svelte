@@ -2,9 +2,9 @@
 	import Reading from "$lib/components/Reading.svelte";
 	import { Book } from "$lib/types/book";
 
-	let book:Book = new Book();
+	let book: Book = new Book();
 </script>
 
 <div>
-	<Reading book={book} />
+	<Reading {book} />
 </div>

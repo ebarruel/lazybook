@@ -1,14 +1,8 @@
 {
 	"extends": "./.svelte-kit/tsconfig.json",
 	"compilerOptions": {
-		"typeRoots": [
-			"./node_modules/ionic-svelte",
-			"./node_modules/unplugin-icons/types"
-		],
-		"types": [
-			"ionic-svelte",
-			"unplugin-icons/types/svelte"
-		],
+		"typeRoots": ["./node_modules/ionic-svelte", "./node_modules/unplugin-icons/types"],
+		"types": ["ionic-svelte", "unplugin-icons/types/svelte"],
 		"allowJs": true,
 		"checkJs": true,
 		"esModuleInterop": true,
