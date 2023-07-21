@@ -42,7 +42,7 @@ outputs = inputs@{ self, nixpkgs, flake-utils, gomod2nix }:
 
                     src = ./client;
 
-                    npmDepsHash = "sha256-DRgeeBN4Bkc3oOjo9OomARsF6ngm0AOXRBgtazlq50Y=";
+                    npmDepsHash = "sha256-3ypPoTDQwZjcB4ujgu58sBFHzZ+tkFTvQe/bW1MU0HE=";
 
                     npmBuild = "npm run build";
 
