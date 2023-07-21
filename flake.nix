@@ -15,22 +15,30 @@ outputs = inputs@{ self, nixpkgs, flake-utils, gomod2nix }:
         let
             pkgs = nixpkgs.legacyPackages.${system};
 
-            clientInputs = with pkgs; [
-                nodejs-18_x
-                nodePackages.npm
-                nodePackages.ionic
-            ];
+            inPkgs = with pkgs; {
+                dev = {
+                    client = [
+                        prefetch-npm-deps
+                        playwright-test
+                    ];
+                };
 
-            serverInputs = with pkgs; [
-                go gopls gotools go-tools
-                gomod2nix.packages.${system}.default
-            ];
+                client = [
+                    nodejs-18_x
+                    nodePackages.npm
+                ];
+
+                server = [
+                    go gopls gotools go-tools
+                    gomod2nix.packages.${system}.default
+                ];
+            };
         in {
             packages = {
                 default = pkgs.buildNpmPackage {
                     name = "lazybook-client";
 
-                    buildInputs = clientInputs;
+                    buildInputs = inPkgs.client;
 
                     src = ./client;
 
@@ -46,7 +54,7 @@ outputs = inputs@{ self, nixpkgs, flake-utils, gomod2nix }:
                 server = pkgs.buildGoModule {
                     name = "lazybook-server";
 
-                    buildInputs = serverInputs;
+                    buildInputs = inPkgs.server;
 
                     src = ./server;
                     modules = .server/gomod2nix.toml;
@@ -57,7 +65,7 @@ outputs = inputs@{ self, nixpkgs, flake-utils, gomod2nix }:
 
             devShells = with pkgs; {
                 default = mkShell {
-                    buildInputs = clientInputs ++ [ prefetch-npm-deps ];
+                    buildInputs = inPkgs.client ++ inPkgs.dev.client;
                     shellHook = ''
                         cd client
                         echo "This is the client (dev)"
@@ -65,7 +73,7 @@ outputs = inputs@{ self, nixpkgs, flake-utils, gomod2nix }:
                     '';
                 };
                 client = mkShell {
-                    buildInputs = clientInputs;
+                    buildInputs = inPkgs.client;
                     shellHook = ''
                         cd client
                         echo "This is the client (prod)"
@@ -73,7 +81,7 @@ outputs = inputs@{ self, nixpkgs, flake-utils, gomod2nix }:
                     '';
                 };
                 server = mkShell {
-                    buildInputs = serverInputs;
+                    buildInputs = inPkgs.server;
                     shellHook = ''
                         cd server
                         echo "This is the server"
