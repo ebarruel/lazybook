@@ -4,7 +4,10 @@
 	import { Capacitor } from "@capacitor/core";
 
 	const isPWA = (win: Window): boolean =>
-		!!(win.matchMedia?.("(display-mode: standalone)").matches || (win.navigator as any).standalone);
+		!!(
+			win.matchMedia?.("(display-mode: standalone)").matches ||
+			(win.navigator as any).standalone
+		);
 
 	onMount(() => {
 		console.log("Are we native?", Capacitor.isNativePlatform());
