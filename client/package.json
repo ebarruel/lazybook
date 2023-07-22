@@ -46,6 +46,7 @@
 		"@capacitor/android": "^5.1.0",
 		"@capacitor/core": "^5.1.0",
 		"@ionic/core": "^7.1.1",
+		"@mfgames-writing/opf": "^1.0.1",
 		"epub": "^1.2.1",
 		"iconify-icon": "^1.0.8",
 		"ionic-svelte": "^0.5.81",
