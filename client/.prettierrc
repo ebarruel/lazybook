@@ -3,6 +3,7 @@
 	"tabWidth": 4,
 	"useTabs": true,
 	"trailingComma": "none",
+	"bracketSpacing": true,
 	"singleAttributePerLine": true,
 	"plugins": ["prettier-plugin-svelte"],
 	"pluginSearchDirs": ["."],
