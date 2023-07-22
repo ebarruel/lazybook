@@ -18,6 +18,9 @@
 	},
 	"devDependencies": {
 		"@capacitor/cli": "^5.1.0",
+		"epub": "^1.2.1",
+		"@mfgames-writing/epub2": "^1.5.0",
+		"@mfgames-writing/opf": "^1.0.1",
 		"@playwright/test": "^1.36.1",
 		"@sveltejs/adapter-static": "^2.0.2",
 		"@sveltejs/kit": "^1.5.0",
@@ -43,13 +46,11 @@
 	"dependencies": {
 		"@capacitor/android": "^5.1.0",
 		"@capacitor/core": "^5.1.0",
+		"@iconify/json": "^2.2.92",
 		"@ionic/core": "^7.1.1",
-		"@mfgames-writing/opf": "^1.0.1",
-		"epub": "^1.2.1",
 		"iconify-icon": "^1.0.8",
 		"ionic-svelte": "^0.5.81",
 		"ionicons": "^7.1.2",
-		"@iconify/json": "^2.2.92",
 		"unplugin-icons": "^0.16.5"
 	}
 }
