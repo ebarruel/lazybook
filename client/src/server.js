@@ -6,7 +6,7 @@ export function mockServer( { environment = "development" } = {} ) {
 
 		routes() {
 			this.namespace = "api";
-			this.urlPrefix = 'http://localhost:5174';
+			this.urlPrefix = "http://localhost:5174";
 
 			this.get( "/book", () => {
 				return {
