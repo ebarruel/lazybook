@@ -17,7 +17,7 @@ const config = {
 			precompress: false
 		}),
 		alias: {
-			"samples": "../samples"
+			samples: "../samples"
 		}
 	}
 };
