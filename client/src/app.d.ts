@@ -1,7 +1,7 @@
 // See https://kit.svelte.dev/docs/types#app
 // for information about these interfaces
 import "unplugin-icons/types/svelte";
-import type { mockServer } from "./mockAPI/server";
+import type { mockServer } from "./server";
 
 mockServer();
 

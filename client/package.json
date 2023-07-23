@@ -18,7 +18,7 @@
 	},
 	"devDependencies": {
 		"@capacitor/cli": "^5.1.0",
-		"epub": "^1.2.1",
+		"@faker-js/faker": "^8.0.2",
 		"@mfgames-writing/epub2": "^1.5.0",
 		"@mfgames-writing/opf": "^1.0.1",
 		"@playwright/test": "^1.36.1",
@@ -26,6 +26,7 @@
 		"@sveltejs/kit": "^1.5.0",
 		"@typescript-eslint/eslint-plugin": "^5.45.0",
 		"@typescript-eslint/parser": "^5.45.0",
+		"epub": "^1.2.1",
 		"eslint": "^8.28.0",
 		"eslint-config-prettier": "^8.5.0",
 		"eslint-plugin-svelte3": "^4.0.0",

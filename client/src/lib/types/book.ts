@@ -7,10 +7,10 @@ export class Book {
 
 	constructor(
 		title = "title",
-		authors: string[] = [ "author1", "author2" ],
+		authors: string[] = ["author1", "author2"],
 		description = "description",
 		cover = "cover",
-		chapterList: string[] = [ "chapter1", "chapter2" ]
+		chapterList: string[] = ["chapter1", "chapter2"]
 	) {
 		this.title = title;
 		this.authors = authors;
