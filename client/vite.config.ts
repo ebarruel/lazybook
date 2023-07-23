@@ -2,14 +2,14 @@ import { sveltekit } from "@sveltejs/kit/vite";
 import { defineConfig } from "vitest/config";
 import Icons from "unplugin-icons/vite";
 
-export default defineConfig( {
+export default defineConfig({
 	plugins: [
 		sveltekit(),
-		Icons( {
+		Icons({
 			compiler: "svelte"
-		} )
+		})
 	],
 	test: {
-		include: [ "src/**/*.{test,spec}.{js,ts}" ]
+		include: ["src/**/*.{test,spec}.{js,ts}"]
 	}
-} );
+});
