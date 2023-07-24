@@ -1,10 +1,11 @@
-import { expect, test, beforeAll } from "vitest";
+import { expect, test } from "@playwright/test";
 import { mockServer } from "../src/server";
 
-beforeAll(async () => {
+test.beforeAll(async () => {
 	mockServer();
 });
 
-test.skip("get book title", () => {
-	// TODO might be moved to unit testing
+test.skip("get book", async ({request}) => {
+	const res = await request.get("/api/book");
+	expect(res.ok()).toBeTruthy();
 });
