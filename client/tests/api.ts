@@ -5,7 +5,7 @@ test.beforeAll(async () => {
 	mockServer();
 });
 
-test.skip("get book", async ({request}) => {
+test("get book", async ({request}) => {
 	const res = await request.get("/api/book");
 	expect(res.ok()).toBeTruthy();
 });
