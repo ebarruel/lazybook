@@ -6,6 +6,7 @@
 	const isPWA = (win: Window): boolean =>
 		!!(
 			win.matchMedia?.("(display-mode: standalone)").matches ||
+			// eslint-disable-next-line @typescript-eslint/no-explicit-any
 			(win.navigator as any).standalone
 		);
 
