@@ -67,24 +67,21 @@ outputs = inputs@{ self, nixpkgs, flake-utils, gomod2nix }:
                 default = mkShell {
                     buildInputs = inPkgs.client ++ inPkgs.dev.client;
                     shellHook = ''
-                        cd client
-                        echo "This is the client (dev)"
+                        echo "This is the client (dev) env"
                         export TERM="xterm-256color"
                     '';
                 };
                 client = mkShell {
                     buildInputs = inPkgs.client;
                     shellHook = ''
-                        cd client
-                        echo "This is the client (prod)"
+                        echo "This is the client (prod) env"
                         export TERM="xterm-256color"
                     '';
                 };
                 server = mkShell {
                     buildInputs = inPkgs.server;
                     shellHook = ''
-                        cd server
-                        echo "This is the server"
+                        echo "This is the server env"
                         export TERM="xterm-256color"
                     '';
                 };
