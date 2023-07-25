@@ -1,8 +1,10 @@
 import { createServer, Factory, Model } from "miragejs";
 import { faker } from "@faker-js/faker";
 
-export const mockServer = () => {
-	createServer({
+export const mockServer = ({ environment = 'development' }) => {
+	let server = createServer({
+		environment,
+
 		models: {
 			book: Model
 		},
@@ -27,13 +29,13 @@ export const mockServer = () => {
 					}
 					return array;
 				},
-				description: faker.lorem.paragraph,
-			}),
+				description: faker.lorem.paragraph
+			})
 		},
 
 		routes() {
-			this.namespace = "api";
-			this.urlPrefix = "http://localhost:5174";
+			this.namespace = "/api";
+			this.urlPrefix = "http://localhost:4174";
 
 			this.get("/book");
 		},
@@ -42,4 +44,6 @@ export const mockServer = () => {
 			server.createList("book", 5);
 		}
 	});
+
+	return server;
 };
