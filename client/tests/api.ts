@@ -1,35 +1,29 @@
-import { expect, test, request, chromium } from "@playwright/test";
+import { expect, test } from "@playwright/test";
 import { mockServer } from "../src/server";
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 let server: any;
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
-let apiContext: any;
+// let apiContext: any;
 
-test.beforeAll(async () => {
-	server = mockServer({ environment: 'test' });
-	console.log("LOADED SERVER:", server);
+test.beforeAll(async ({browser}) => {
+	const page = await browser.newPage();
+	page.on('console', msg => console.log(msg.text()));
 
-	const browser = await chromium.launch();
-	const page = browser.newPage();
-	(await page).on('console', msg => console.log(msg.text()));
-
-	apiContext = await request.newContext({
-		// All requests we send go to this API endpoint.
-		baseURL: 'http://localhost:4174',
-	});
-	console.log("LOADED API CONTEXT:", apiContext);
+	server = mockServer() //{ environment: 'test' });
+	server.logging = true;
 });
 
 test.afterAll(async () => {
 	server.shutdown();
 	// Dispose all responses.
-	await apiContext.dispose();
+	// await apiContext.dispose();
 });
 
-test("get book", async ({ request }) => {
-	const book = await request.get("/api/book");
-	console.log("!!! REQUEST:", request);
-	console.log("!!! BOOK:", book);
+test("get book", async ({request}) => {
+	console.log("!!! SERVER !!!:", server);
+	const book = await request.get("/api/books");
+	// console.log("!!!!! REQUESTS !!!!!:", server.pretender.handledRequests());
 	expect(book.ok()).toBeTruthy();
+	console.log(await book.json());
 });

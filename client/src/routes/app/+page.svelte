@@ -1,8 +1,9 @@
 <script lang="ts">
 	import Reading from "$lib/components/Reading.svelte";
-	import { Book } from "$lib/types/book";
+	import Book, { getBooks } from "$lib/types/book";
 
-	let book: Book = new Book();
+	let book: Book;
+	getBooks().then(books => {book = books[0]});
 </script>
 
 <div>

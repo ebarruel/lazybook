@@ -1,9 +1,9 @@
 // See https://kit.svelte.dev/docs/types#app
 // for information about these interfaces
 import "unplugin-icons/types/svelte";
-import type { mockServer } from "./server";
+import { mockServer } from "./server";
 
-mockServer();
+export const server = mockServer();
 
 declare global {
 	namespace App {

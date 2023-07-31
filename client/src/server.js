@@ -1,43 +1,43 @@
 import { createServer, Factory, Model } from "miragejs";
 import { faker } from "@faker-js/faker";
 
-export const mockServer = ({ environment = 'development' }) => {
+export const mockServer = () => {
 	let server = createServer({
-		environment,
-
 		models: {
 			book: Model
 		},
 
+		routes() {
+			this.logging = true;
+			// this.urlPrefix = "http://localhost:4183";
+			this.namespace = "api";
+
+			this.get("/books");
+			this.passthrough();
+		},
+
 		factories: {
-			movie: Factory.extend({
-				title: faker.word.sample,
+			book: Factory.extend({
+				title: faker.lorem.words().toUpperCase(),
 				authors: faker.helpers.multiple(faker.person.fullName, {
 					count: { min: 1, max: 5 }
 				}),
 				contributors: faker.helpers.multiple(faker.person.fullName, {
 					count: { min: 0, max: 10 }
 				}),
-				publisher: faker.company.name,
+				publisher: faker.company.name(),
 				cover: faker.image.url(),
 				chapterList() {
-					const array = [];
-					const count = faker.number.int(10);
+					const count = faker.number.int({min: 1, max: 10});
+					var array = [];
 
-					for (let i = 0; i++; i < count) {
-						array.push("Chapter ${i}");
+					for (let i = 0; i < count; i++) {
+						array.push("Chapter " + i.toString());
 					}
 					return array;
 				},
-				description: faker.lorem.paragraph
+				description: faker.lorem.paragraph()
 			})
-		},
-
-		routes() {
-			this.namespace = "/api";
-			this.urlPrefix = "http://localhost:4174";
-
-			this.get("/book");
 		},
 
 		seeds(server) {
