@@ -1,5 +1,5 @@
 import { expect, test } from "@playwright/test";
-import { mockServer } from "../src/server";
+import { mockServer } from "../src/mocks/server";
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 let server: any;
