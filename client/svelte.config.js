@@ -20,7 +20,8 @@ const config = {
 		alias: {
 			$samples: path.resolve("../samples"),
 			$mocks: path.resolve("./src/mocks"),
-			$lib: path.resolve("./src/lib")
+			$lib: path.resolve("./src/lib"),
+			$src: path.resolve("./src")
 		}
 	}
 };

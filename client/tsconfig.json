@@ -12,6 +12,8 @@
 		"sourceMap": true,
 		"strict": true,
 		"paths": {
+			"$src": ["./src"],
+			"$src/*": ["./src/*"],
 			"$lib": ["./src/lib"],
 			"$lib/*": ["./src/lib/*"],
 			"$mocks": ["./src/mocks"],
