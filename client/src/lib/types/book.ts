@@ -12,7 +12,7 @@ export default class Book {
 		title = "title",
 		authors: string[] = ["author1", "author2"],
 		description = "description",
-		cover = faker.image.url(),
+		cover = faker.image.url({height: 300, width: 200}),
 		chapterList: string[] = ["chapter1", "chapter2"]
 	) {
 		this.title = title;
@@ -25,5 +25,5 @@ export default class Book {
 
 export const getBooks = async (): Promise<Book[]> => {
 	const res = await axios.get('./api/books');
-	return res.data;
+	return JSON.parse(res.data);
 }

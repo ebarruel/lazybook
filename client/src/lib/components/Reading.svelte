@@ -2,6 +2,7 @@
 	import type Book from "$lib/types/book";
 
 	export let book: Book;
+	console.log(book);
 	let coverImg: string = book.cover;
 	let title: string = book.title;
 	let authors: string[] = book.authors;

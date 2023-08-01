@@ -3,9 +3,13 @@
 	import Book, { getBooks } from "$lib/types/book";
 
 	let book: Book;
-	getBooks().then(books => {book = books[0]});
+	let pbook: Promise<Book> = getBooks().then(books => {return books[0];});
 </script>
 
-<div>
-	<Reading {book} />
-</div>
+{#await pbook}
+	<p>Currently Reading...</p>
+{:then book}
+	<div>
+		<Reading {book} />
+	</div>
+{/await}
