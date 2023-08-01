@@ -1,9 +1,12 @@
 // See https://kit.svelte.dev/docs/types#app
 // for information about these interfaces
 import "unplugin-icons/types/svelte";
-import { mockServer } from "./mocks/server";
 
-export const server = mockServer();
+if (process.env.NODE_ENV === 'development') {
+	import { worker } from "./mocks/browser";
+
+	worker.start();
+}
 
 declare global {
 	namespace App {

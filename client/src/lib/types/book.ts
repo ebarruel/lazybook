@@ -1,5 +1,4 @@
 import axios from 'axios';
-import { server } from '../../mocks/server';
 
 export default class Book {
 	title: string;
