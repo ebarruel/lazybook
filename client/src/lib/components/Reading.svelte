@@ -1,5 +1,5 @@
 <script lang="ts">
-	import type { Book } from "$lib/types/book";
+	import type Book from "$lib/types/book";
 
 	export let book: Book;
 	let coverImg: string = book.cover;
