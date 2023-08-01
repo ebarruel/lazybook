@@ -62,6 +62,8 @@ The Nix flake provides build packages and dev shells for both the client and the
 3. Start application with `npm run dev`.
 4. Press `o` to open the app in a browser.
 
+To get the hash of the client's dependencies, use `prefetch-npm-deps package-lock.json`.
+
 #### Server
 
 TODO
