@@ -1,5 +1,6 @@
 import adapter from "@sveltejs/adapter-static";
 import preprocess from "svelte-preprocess";
+import path from "path";
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
@@ -17,7 +18,9 @@ const config = {
 			precompress: false
 		}),
 		alias: {
-			samples: "../samples"
+			$samples: path.resolve("../samples"),
+			$mocks: path.resolve("./src/mocks"),
+          	$lib: path.resolve("./src/lib")
 		}
 	}
 };

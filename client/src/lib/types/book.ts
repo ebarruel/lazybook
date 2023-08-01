@@ -1,4 +1,5 @@
 import axios from 'axios';
+import { faker } from '@faker-js/faker';
 
 export default class Book {
 	title: string;
@@ -11,7 +12,7 @@ export default class Book {
 		title = "title",
 		authors: string[] = ["author1", "author2"],
 		description = "description",
-		cover = "cover",
+		cover = faker.image.url(),
 		chapterList: string[] = ["chapter1", "chapter2"]
 	) {
 		this.title = title;

@@ -1,7 +1,7 @@
 import { rest } from "msw";
 import Book from "../lib/types/book";
 
-const handlers = [
+export const handlers = [
     rest.get("/api/books", (req, res, ctx) => {
         const books = Array.from({length: 5}, () => {
             return new Book();
@@ -13,5 +13,3 @@ const handlers = [
         )
     }),
 ]
-
-export default handlers;

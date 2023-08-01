@@ -59,6 +59,6 @@
     "unplugin-icons": "^0.16.5"
   },
   "msw": {
-    "workerDirectory": "../static"
+    "workerDirectory": "static"
   }
 }
