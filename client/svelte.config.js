@@ -18,10 +18,10 @@ const config = {
 			precompress: false
 		}),
 		alias: {
+			$src: path.resolve("./src"),
 			$samples: path.resolve("../samples"),
 			$mocks: path.resolve("./src/mocks"),
-			$lib: path.resolve("./src/lib"),
-			$src: path.resolve("./src")
+			$lib: path.resolve("./src/lib")
 		}
 	}
 };
