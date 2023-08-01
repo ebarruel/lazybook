@@ -50,22 +50,17 @@ The Nix flake provides build packages and dev shells for both the client and the
 
 **Client with prefetch-npm-deps (default):** `nix develop`
 
-> Note that this will cd into `client`.
-
 **Client without prefetch-npm-deps:** `nix develop .#client`
-
-> Note that this will cd into `client`.
 
 **Server:** `nix develop .#server`
 
-> Note that this will cd into `server`.
-
 #### Client
 
-0. If using Nix, enter the dev shell. If not, `cd client`.
-1. Install dependencies with `npm i`.
-2. Start application with `npm run dev`.
-3. Press `o` to open the app in a browser.
+0. If using Nix, enter the dev shell.
+1. Enter the `client` directory with `cd client`.
+2. Install dependencies with `npm i`.
+3. Start application with `npm run dev`.
+4. Press `o` to open the app in a browser.
 
 #### Server
 
