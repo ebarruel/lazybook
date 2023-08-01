@@ -19,7 +19,7 @@
 			<ion-col size="auto">
 				<ion-img
 					src={coverImg}
-					alt={title}
+					alt="Currently Reading Cover Image"
 				/>
 			</ion-col>
 			<ion-col>
