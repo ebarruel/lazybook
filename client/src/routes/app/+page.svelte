@@ -2,8 +2,9 @@
 	import Reading from "$lib/components/Reading.svelte";
 	import Book, { getBooks } from "$lib/types/book";
 
-	let book: Book;
-	let pbook: Promise<Book> = getBooks().then(books => {return books[0];});
+	let pbook: Promise<Book> = getBooks().then((books) => {
+		return books[0];
+	});
 </script>
 
 {#await pbook}

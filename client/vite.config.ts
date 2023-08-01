@@ -9,7 +9,7 @@ export default defineConfig({
 		sveltekit(),
 		Icons({
 			compiler: "svelte"
-		}),
+		})
 	],
 	test: {
 		include: ["tests/**/*.{unit,spec}.{js,ts}"]

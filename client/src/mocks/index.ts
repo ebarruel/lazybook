@@ -7,16 +7,16 @@ import { browser, dev } from "$app/environment";
  * imports from server/client.
  */
 export async function inject() {
-  if (dev && browser) {
-    const { worker } = await import("./worker");
-    // For live development, I disabled all warnings
-    // for requests that are not mocked. Change how
-    // you think it best fits your project.
-    return worker.start({ onUnhandledRequest: "bypass" }).catch(console.warn);
-  }
-  if (dev && !browser) {
-    const { server } = await import("./server");
-    // Same as in worker-mock above.
-    return server.listen({ onUnhandledRequest: "bypass" });
-  }
+	if (dev && browser) {
+		const { worker } = await import("./worker");
+		// For live development, I disabled all warnings
+		// for requests that are not mocked. Change how
+		// you think it best fits your project.
+		return worker.start({ onUnhandledRequest: "bypass" }).catch(console.warn);
+	}
+	if (dev && !browser) {
+		const { server } = await import("./server");
+		// Same as in worker-mock above.
+		return server.listen({ onUnhandledRequest: "bypass" });
+	}
 }
