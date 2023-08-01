@@ -1,13 +1,5 @@
-import { defineConfig, PlaywrightTestProject } from "@playwright/test";
+import { defineConfig } from "@playwright/test";
 
-const setup: PlaywrightTestProject = {
-	name: "setup",
-	testMatch: ["tests/global.setup.ts"]
-}
-
-const config: PlaywrightTestProject = {
-	dependencies: [ "setup" ]
-}
 
 export default defineConfig({
 	webServer: {
@@ -15,7 +7,7 @@ export default defineConfig({
 		port: 4173
 	},
 	testDir: "./tests",
-	testMatch: ["**/*.{js,ts}"],
+	testMatch: ["**/*.test.{js,ts}"],
 	fullyParallel: true,
 	use: {
 		// Base URL to use in actions like `await page.goto('/')`.
@@ -24,8 +16,4 @@ export default defineConfig({
 		// Collect trace when retrying the failed test.
 		trace: 'on-first-retry',
 	},
-	projects: [
-		setup,
-		config
-	]
 })

@@ -1,10 +1,11 @@
-import { expect, test } from "@playwright/test";
+import { test, expect } from './test';
+import axios from 'axios';
 
 test.beforeEach( async ({page}) => {
 	page.goto("/");
 })
 
-test("get book", async ({request}) => {
-	const response = await request.get("/books");
-	await expect(response).toBeOK();
+test("get book", async () => {
+	const response = await axios.get("http://localhost:4173/api/books");
+	await expect(response.status).toBe(200);
 });
