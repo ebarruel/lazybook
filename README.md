@@ -1,18 +1,18 @@
 # Lazy Book
 
-Lazy Book is a project that is meant to update the digital reading experience. The primary focus is bringing reading material generally relegated to appendices into view in a more interactive and accessible way.
+Lazy Book is a project that is meant to update the digital reading experience. The primary goal is bringing reading material generally relegated to appendices into view in a more interactive and accessible way.
 
 ## Projected Features
 
 - **Encyclopedia**
-  - **accessible:** encyclopedia pages that are interlinked with terms in the novel (similar interlinking to ObsidianMD and LogSeq)
+  - [ ] **accessible:** encyclopedia pages that are interlinked with terms in the novel (similar interlinking to ObsidianMD and LogSeq)
   - **dynamic:** new material is added to the encyclopedia as the reader moves through the novel
 - **Series Organization**
-  - **nestable collections:** groups of books can be nested (e.g. series grouped with other series in the universe)
-  - **related books:** prequels and sequels can be linked before and after the book
-  - **shared encyclopedia:** the same encyclopedia can be used for multiple books
-- **Federation with Activity Pub**
-- **Support for Multiple Formats**
+  - [ ] **nestable collections:** groups of books can be nested (e.g. series grouped with other series in the universe)
+  - [ ] **related books:** prequels and sequels can be linked before and after the book
+  - [ ] **shared encyclopedia:** the same encyclopedia can be used for multiple books
+- [ ] **Federation with Activity Pub**
+- [ ] **Support for Multiple Formats**
 
 ## Development
 
