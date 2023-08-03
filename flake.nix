@@ -26,6 +26,7 @@ outputs = inputs@{ self, nixpkgs, flake-utils, gomod2nix }:
                 client = [
                     nodejs-18_x
                     nodePackages.npm
+                    bun
                 ];
 
                 server = [
