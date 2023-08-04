@@ -1,7 +1,7 @@
 import { test, expect } from "./test.setup";
 
 test.beforeEach(async ({ page }) => {
-	page.goto("/");
+	await page.goto("/");
 });
 
 test("get book", async ({ page }) => {
