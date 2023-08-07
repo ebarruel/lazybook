@@ -10,9 +10,7 @@
 	let isReady = !isMockEnabled;
 
 	if (isMockEnabled) {
-		import("$mocks")
-			.then((res) => res.inject())
-			.then(() => (isReady = true));
+		import("$mocks").then((res) => res.inject()).then(() => (isReady = true));
 	}
 </script>
 

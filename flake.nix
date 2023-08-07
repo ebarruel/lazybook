@@ -26,6 +26,7 @@ outputs = inputs@{ self, nixpkgs, flake-utils, gomod2nix }:
                 client = [
                     nodejs-18_x
                     nodePackages.npm
+                    bun
                 ];
 
                 server = [
@@ -67,22 +68,25 @@ outputs = inputs@{ self, nixpkgs, flake-utils, gomod2nix }:
                 default = mkShell {
                     buildInputs = inPkgs.client ++ inPkgs.dev.client;
                     shellHook = ''
+                        echo
                         echo "This is the client (dev) env"
-                        export TERM="xterm-256color"
+                        echo
                     '';
                 };
                 client = mkShell {
                     buildInputs = inPkgs.client;
                     shellHook = ''
+                        echo
                         echo "This is the client (prod) env"
-                        export TERM="xterm-256color"
+                        echo
                     '';
                 };
                 server = mkShell {
                     buildInputs = inPkgs.server;
                     shellHook = ''
+                        echo
                         echo "This is the server env"
-                        export TERM="xterm-256color"
+                        echo
                     '';
                 };
             };
