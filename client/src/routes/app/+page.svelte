@@ -10,7 +10,5 @@
 {#await pbook}
 	<p>Currently Reading...</p>
 {:then book}
-	<div>
-		<Reading {book} />
-	</div>
+	<Reading {book} />
 {/await}
