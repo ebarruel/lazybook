@@ -5,7 +5,7 @@
 	setupIonicBase();
 
 	/* Import all components - or do partial loading - see below */
-	import "ionic-svelte/components/all";
+	// import "ionic-svelte/components/all";
 
 	/* Theme variables */
 	import "../../theme/variables.css";
@@ -41,6 +41,28 @@
 		Want to know what is happening more - follow me on Twitter - https://twitter.com/Tommertomm
 		Discord channel on Ionic server - https://discordapp.com/channels/520266681499779082/1049388501629681675
 	*/
+
+	import "ionic-svelte/components/ion-app";
+
+	// tabs
+	import "ionic-svelte/components/ion-tabs";
+	import "ionic-svelte/components/ion-tab-bar";
+	import "ionic-svelte/components/ion-tab-button";
+
+	// cards
+	import "ionic-svelte/components/ion-card";
+	import "ionic-svelte/components/ion-card-header";
+	import "ionic-svelte/components/ion-card-title";
+
+
+	// grids
+	import "ionic-svelte/components/ion-grid";
+	import "ionic-svelte/components/ion-row";
+	import "ionic-svelte/components/ion-col";
+
+	// other
+	import "ionic-svelte/components/ion-img";
+	import "ionic-svelte/components/ion-label";
 
 	import Nav from "$lib/components/Nav.svelte";
 </script>
