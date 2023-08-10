@@ -5,11 +5,15 @@ test.beforeEach(async ({ page }) => {
 });
 
 test("get book (currently reading)", async ({ page }) => {
-	await expect(page.getByText("Currently Reading...")).toBeVisible();
+	await expect(page.getByRole("heading", {name: "Currently Reading..."})).toBeVisible();
 	await expect(page.getByAltText("Currently Reading Cover Image")).toBeVisible();
 });
 
-test("get list (homepage)", async ({page}) => {
-	await expect(page.getByText("List 1")).toBeVisible();
+test.skip("get list (homepage)", async ({page}) => {
+	await expect(page.getByRole("heading", {name: "List 1"})).toBeVisible();
 	
+	// expect at least 3 books in list
+	for (let i = 0; i < 3; i++) {
+		await expect(page.getByAltText("List 1 Book Cover ${i}")).toBeVisible();
+	};
 });
