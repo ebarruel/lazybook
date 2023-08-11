@@ -3,7 +3,7 @@
 
 	export let book: Book;
 	console.log(book);
-	let coverImg: string = book.cover;
+	let coverImg: string = book.cover !== "Cover Not Found" ? book.cover : "$lib/assets/defaultImg";
 	let title: string = book.title;
 	let authors: string[] = book.authors;
 	let description: string = book.description;
@@ -30,3 +30,10 @@
 		</ion-row>
 	</ion-grid>
 </ion-card>
+
+<style>
+	ion-img {
+		width: 200;
+		height: 300;
+	}
+</style>
