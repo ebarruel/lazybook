@@ -1,18 +1,18 @@
 import axios from "axios";
 
 export default class Book {
-	title: string;
+	title: string | null;
 	authors: string[];
-	description: string;
-	cover: string;
-	chapterList: string[];
+	description: string | null;
+	cover: string | null;
+	chapterList: string[] | null;
 
 	constructor(
-		title = "Title Not Found",
-		authors: string[] = ["Author Not Found"],
-		description = "Description Not Found",
-		cover = "Cover Not Found",
-		chapterList: string[] = ["Chapter Not Found"]
+		title = null,
+		authors: string[] = [],
+		description = null,
+		cover = null,
+		chapterList: string[] = []
 	) {
 		this.title = title;
 		this.authors = authors;
