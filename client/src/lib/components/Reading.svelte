@@ -3,10 +3,10 @@
 
 	export let book: Book;
 	console.log(book);
-	let coverImg: string = book.cover !== "Cover Not Found" ? book.cover : "$lib/assets/defaultImg";
-	let title: string = book.title;
+	let coverImg: string | null = book.cover ? book.cover : "$lib/assets/defaultImg";
+	let title: string | null = book.title ? book.title : "Title Not Found";
 	let authors: string[] = book.authors;
-	let description: string = book.description;
+	let description: string | null = book.description ? book.description : "Description not found.";
 </script>
 
 <ion-card>
