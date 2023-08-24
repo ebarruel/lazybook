@@ -50,12 +50,8 @@
 	"dependencies": {
 		"@capacitor/android": "^5.1.0",
 		"@capacitor/core": "^5.1.0",
-		"@iconify/json": "^2.2.92",
 		"@ionic/core": "^7.3.1",
-		"iconify-icon": "^1.0.8",
-		"ionic-svelte": "^0.5.81",
-		"ionicons": "^7.1.2",
-		"unplugin-icons": "^0.16.5"
+		"ionic-svelte": "^0.5.81"
 	},
 	"msw": {
 		"workerDirectory": "static"
