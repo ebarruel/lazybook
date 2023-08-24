@@ -1,39 +1,33 @@
 <script lang="ts">
-	import IonHomeOutline from "~icons/ion/home-outline";
-	import IonLibraryOutline from "~icons/ion/library-outline";
-	import IonPencilOutline from "~icons/ion/pencil-outline";
-	import IonSearchOutline from "~icons/ion/search-outline";
-	import IonPersonOutline from "~icons/ion/person-outline";
-
 	// rename to allow for easy replacement
-	let HomeIcon = IonHomeOutline;
-	let LibIcon = IonLibraryOutline;
-	let PubIcon = IonPencilOutline;
-	let SearchIcon = IonSearchOutline;
-	let UserIcon = IonPersonOutline;
+	const HomeIcon = "home-outline";
+	const LibIcon = "library-outline";
+	const PubIcon = "pencil-outline";
+	const SearchIcon = "search-outline";
+	const UserIcon = "person-outline";
 </script>
 
 <ion-tab-button tab="home">
-	<HomeIcon />
+	<ion-icon name={HomeIcon}></ion-icon>
 	<ion-label>home</ion-label>
 </ion-tab-button>
 
 <ion-tab-button tab="library">
-	<LibIcon />
+	<ion-icon name={LibIcon}></ion-icon>
 	<ion-label>lib</ion-label>
 </ion-tab-button>
 
 <ion-tab-button tab="publish">
-	<PubIcon />
+	<ion-icon name={PubIcon}></ion-icon>
 	<ion-label>pub</ion-label>
 </ion-tab-button>
 
 <ion-tab-button tab="search">
-	<SearchIcon />
+	<ion-icon name={SearchIcon}></ion-icon>
 	<ion-label>search</ion-label>
 </ion-tab-button>
 
 <ion-tab-button tab="user">
-	<UserIcon />
+	<ion-icon name={UserIcon}></ion-icon>
 	<ion-label>user</ion-label>
 </ion-tab-button>
